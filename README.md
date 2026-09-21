@@ -12,4 +12,4 @@ Served by GitHub Pages at [bomerd.com](https://bomerd.com).
 
 ---
 
-Questions or anything wrong on these pages: support@bomerd.com
+Questions or anything wrong on these pages: bomerrd@gmail.com
