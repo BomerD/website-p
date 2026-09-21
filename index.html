@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Arrowgami</title>
+<meta name="description" content="A quiet puzzle game about clearing a board of arrows." />
+<style>
+  :root {
+    --bg: #FAF9F6;
+    --surface: #FFFFFF;
+    --ink: #141B3A;
+    --ink-muted: #5B6384;
+    --accent: #3B4BF5;
+    --border: #DADEEF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0E1220;
+      --surface: #171C2E;
+      --ink: #F4F5FA;
+      --ink-muted: #9AA1C2;
+      --accent: #6C7BFF;
+      --border: #2B3350;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 6rem 16px 4rem;
+  }
+  h1 {
+    font-size: clamp(2.5rem, 9vw, 4rem);
+    letter-spacing: -0.03em;
+    margin: 0 0 .5rem;
+  }
+  .tagline { font-size: 1.25rem; color: var(--ink-muted); margin: 0 0 3rem; }
+  h2 { font-size: 1.05rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); margin: 3rem 0 1rem; }
+  p { margin: 0 0 1rem; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 1.75rem;
+  }
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--ink-muted);
+    font-size: .9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Arrowgami</h1>
+  <p class="tagline">A quiet puzzle game about clearing a board of arrows.</p>
+
+  <div class="card">
+    <p>Every arrow points somewhere. Tap one whose path to the edge is clear and it slides away, opening a route for the next. Clear the board.</p>
+    <p>New puzzle every day. No account, no timer, no pressure.</p>
+  </div>
+
+  <h2>Support</h2>
+  <p>Questions, bugs or ideas: <a href="mailto:support@bomerd.com">support@bomerd.com</a></p>
+
+  <footer>
+    <a href="/privacy/">Privacy policy</a>
+    <span>&copy; 2026 Bomerd</span>
+  </footer>
+</main>
+</body>
+</html>
