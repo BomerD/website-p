@@ -1,9 +1,21 @@
 # bomerd.com
 
-The website for **Arrowgami**, a puzzle game about clearing a board of arrows.
+The website for Bomerd's games:
 
-- `index.html` — landing page
-- `privacy/index.html` — privacy policy, served at `/privacy/`
+- **Arrowgami**, a puzzle game about clearing a board of arrows.
+- **Conveyor Kingdom: Color Loop**, a puzzle game about feeding a looping belt of gems.
+
+Files:
+
+- `index.html` — landing page listing both games
+- `privacy/index.html` — Arrowgami's privacy policy, served at `/privacy/`
+- `conveyor-kingdom/privacy/index.html` — Conveyor Kingdom's privacy policy,
+  served at `/conveyor-kingdom/privacy/`
+- `images/` — the game icons shown on the landing page
+- `app-ads.txt` — AdMob's authorised-sellers file (Arrowgami's ads)
+
+Each game has its own privacy policy because each Play listing points to one,
+and each must match that app's Data safety form. Keep them separate.
 
 Static HTML, no build step and no dependencies. Open `index.html` in a browser
 to view it locally.

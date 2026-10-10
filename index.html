@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Arrowgami</title>
-<meta name="description" content="A quiet puzzle game about clearing a board of arrows." />
+<title>Bomerd</title>
+<meta name="description" content="Calm puzzle games for your phone: Arrowgami and Conveyor Kingdom: Color Loop." />
 <style>
   :root {
     --bg: #FAF9F6;
@@ -50,7 +50,30 @@
     border: 1px solid var(--border);
     border-radius: 28px;
     padding: 1.75rem;
+    margin: 0 0 1.25rem;
+    scroll-margin-top: 1.5rem;
   }
+  .game-head {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 0 0 1.25rem;
+  }
+  .game-head img {
+    width: 72px;
+    height: 72px;
+    flex: none;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+  }
+  .game-head h3 {
+    font-size: clamp(1.35rem, 5vw, 1.65rem);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 0 0 .25rem;
+  }
+  .game-head p { color: var(--ink-muted); margin: 0; }
+  .links { margin: 1.5rem 0 0; }
   footer {
     margin-top: 4rem;
     padding-top: 1.5rem;
@@ -66,19 +89,41 @@
 </head>
 <body>
 <main>
-  <h1>Arrowgami</h1>
-  <p class="tagline">A quiet puzzle game about clearing a board of arrows.</p>
+  <h1>Bomerd</h1>
+  <p class="tagline">Calm puzzle games for your phone.</p>
 
-  <div class="card">
+  <h2>Games</h2>
+
+  <section class="card" id="arrowgami">
+    <div class="game-head">
+      <img src="images/arrowgami.png" alt="Arrowgami icon" width="72" height="72" />
+      <div>
+        <h3>Arrowgami</h3>
+        <p>A quiet puzzle game about clearing a board of arrows.</p>
+      </div>
+    </div>
     <p>Every arrow points somewhere. Tap one whose path to the edge is clear and it slides away, opening a route for the next. Clear the board.</p>
     <p>New puzzle every day. No account, no timer, no pressure.</p>
-  </div>
+    <p class="links"><a href="privacy/">Privacy policy</a></p>
+  </section>
+
+  <section class="card" id="conveyor-kingdom">
+    <div class="game-head">
+      <img src="images/conveyor-kingdom.png" alt="Conveyor Kingdom: Color Loop icon" width="72" height="72" />
+      <div>
+        <h3>Conveyor Kingdom: Color Loop</h3>
+        <p>Feed the belt, match the colors, shatter the glass before it reaches your wall.</p>
+      </div>
+    </div>
+    <p>Glass crystals march down the road toward your tower. Tap boxes to pour their gems onto a looping belt, and your shooter fires each color at the crystal that needs it. Feed it the wrong colors and the belt clogs; feed it the right ones and the glass shatters.</p>
+    <p>60 levels across six worlds. No account needed, and it plays offline.</p>
+    <p class="links"><a href="conveyor-kingdom/privacy/">Privacy policy</a></p>
+  </section>
 
   <h2>Support</h2>
   <p>Questions, bugs or ideas: <a href="mailto:bomerrd@gmail.com">bomerrd@gmail.com</a></p>
 
   <footer>
-    <a href="privacy/">Privacy policy</a>
     <span>&copy; 2026 Bomerd</span>
   </footer>
 </main>
