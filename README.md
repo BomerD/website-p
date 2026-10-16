@@ -2,11 +2,10 @@
 
 The website for Bomerd's games:
 
-- **Okyay** (formerly Arrowgami), a puzzle game about clearing a board of arrows. Its policy
-  stays at `/privacy/`, as the app and Play link to it.
-- **Shard Kingdom: Color Defense** (formerly Conveyor Kingdom: Color Loop), a color defense game about firing the right gems
-  at glass crystals. Its pages moved from `conveyor-kingdom/` to `shard-kingdom/` on 16 October 2026 (the old address
-  is gone: Play Console must link the new one).
+- **Okyay**, a puzzle game about clearing a board of arrows. Its policy is at `/privacy/`,
+  which the app and Play link to.
+- **Shard Kingdom: Color Defense**, a color defense game about firing the right gems at glass
+  crystals. Its policy is at `/shard-kingdom/privacy/`, which Play links to.
 
 Files:
 
