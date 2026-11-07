@@ -13,7 +13,12 @@ Files:
 - `privacy/index.html` — Okyay's privacy policy, served at `/privacy/`
 - `shard-kingdom/privacy/index.html` — Shard Kingdom's privacy policy,
   served at `/shard-kingdom/privacy/`
-- `images/` — the game icons shown on the landing page
+- `shard-kingdom/play/index.html` — Shard Kingdom's Google Play button, served at `/shard-kingdom/play/`:
+  the link in its social profiles and posts (`?utm_source=instagram&utm_campaign=bio`, passed on to Play as the
+  install referrer). Instagram's and Facebook's own browsers on Android do nothing with a play.google.com link, so
+  its button opens the Play Store app itself (`market://`), and says how to open the page in Chrome if that fails
+- `images/` — the game icons shown on the landing page, Shard Kingdom's feature graphic (the Play page's banner
+  and link preview) and Google's Get it on Google Play badge (Google's file, never redrawn or recolored)
 - `app-ads.txt` — AdMob's authorised-sellers file. One AdMob account (one publisher ID) serves both games' ads,
   so its one line covers both; each game's Play listing must give bomerd.com as its website
 
