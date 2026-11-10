@@ -1,0 +1,194 @@
+/* bomerd.com: Shard Kingdom's look, from the game's own design (its DESIGN.md and ui/style.gd).
+   Calm spaces in each world's colors, the only saturated things the gems; ink and paper for everything else (no gem
+   color is ever used for the page's own buttons or links); Outfit, titles in letter-spaced capitals. The game page
+   travels Dawn to Abyss as it scrolls, as the game grows darker world by world. */
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* --- Each world's palette (ui/style.gd SECTIONS; paper as world/view.gd's _palette_of) --- */
+.w-dawn  { --sky-top: #eaf2f8; --sky-bottom: #fdf6ee; --fog: #ffffff; --ground: #f3eee7; --paper: #ffffff; --paper-edge: #d9d3cb; --ink: #2b3440; --brass-word: #8a6a2c; }
+.w-mist  { --sky-top: #d6e9ea; --sky-bottom: #eef5f2; --fog: #f4fbfa; --ground: #e3ecea; --paper: #f7faf9; --paper-edge: #c3d1cf; --ink: #22383a; --brass-word: #8a6a2c; }
+.w-bloom { --sky-top: #f1e4f1; --sky-bottom: #fbf1ec; --fog: #fff8fb; --ground: #efe5ea; --paper: #fffafc; --paper-edge: #d6c6cf; --ink: #3a2b3a; --brass-word: #8a6a2c; }
+.w-ember { --sky-top: #f5c9a0; --sky-bottom: #f9e6d0; --fog: #fff1e2; --ground: #ebd3bc; --paper: #fff6ec; --paper-edge: #cfae90; --ink: #3d2416; --brass-word: #7a5a1f; }
+.w-dusk  { --sky-top: #3b3f6b; --sky-bottom: #6a5c86; --fog: #4a4a78; --ground: #2e3150; --paper: #434662; --paper-edge: #1c1d30; --ink: #f2eeff; --brass-word: #e0c48a; }
+.w-abyss { --sky-top: #0b1026; --sky-bottom: #1c2547; --fog: #141b3a; --ground: #0e1430; --paper: #262c45; --paper-edge: #080c1d; --ink: #e6ecff; --brass-word: #e0c48a; }
+/* Infinite: Abyss under a sky that cycles through every world's */
+.w-infinite { --sky-top: #2a2550; --sky-bottom: #1c2547; --fog: #141b3a; --ground: #0e1430; --paper: #262c45; --paper-edge: #080c1d; --ink: #e6ecff; --brass-word: #e0c48a; }
+
+:root {
+  --brass: #c9a35b;
+  --outline: #222a36;
+  --radius: 18px;
+  --edge: 6px;
+  --font: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 16px; }
+body {
+  margin: 0;
+  font: 380 17px/1.6 var(--font);
+  color: var(--ink);
+  background: var(--sky-bottom);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; height: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 6px; }
+.vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.muted { color: color-mix(in srgb, var(--ink) 74%, transparent); }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+/* A band of the page in one world's colors; --from is the band above's bottom, so one blends into the next. */
+.band {
+  position: relative;
+  color: var(--ink);
+  background: linear-gradient(to bottom, var(--from, var(--sky-top)) 0, var(--sky-top) 160px, var(--sky-bottom) 100%);
+  padding: 72px 0;
+}
+.band.tight { padding-top: 24px; }
+
+/* --- Type: titles in letter-spaced capitals, light; numbers and buttons bold --- */
+.title {
+  font-weight: 300;
+  font-size: clamp(1.55rem, 5.2vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 .6rem;
+}
+.lead { text-align: center; max-width: 38rem; margin: 0 auto 2.25rem; font-size: 1.08rem; }
+.kicker {
+  display: block; text-align: center; font-weight: 600; font-size: .8rem; letter-spacing: .2em;
+  text-transform: uppercase; margin: 0 0 .6rem;
+  color: color-mix(in srgb, var(--ink) 70%, transparent);
+}
+h3 { font-weight: 600; font-size: 1.12rem; line-height: 1.3; margin: 0 0 .35rem; }
+p { margin: 0 0 1rem; }
+
+/* --- Paper: a flat tile on a thicker edge (the game's menus) --- */
+.tile {
+  background: var(--paper);
+  border-radius: var(--radius);
+  box-shadow: 0 var(--edge) 0 var(--paper-edge);
+  padding: 20px 20px 16px;
+  margin-bottom: var(--edge);
+}
+.tile p { margin: 0; }
+.tile .muted { font-size: .97rem; }
+.chip {
+  display: inline-block; font-weight: 600; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase;
+  padding: .2rem .6rem; border-radius: 999px; border: 1.5px solid currentColor; line-height: 1.4;
+}
+.chip.ink { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* --- Buttons: a filled ink capsule (primary) and an outlined one (secondary) --- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  font: 600 1rem/1 var(--font); letter-spacing: .02em; text-decoration: none; white-space: nowrap;
+  padding: .85rem 1.35rem; border-radius: 999px; cursor: pointer;
+  background: var(--ink); color: var(--sky-bottom); border: 2px solid var(--ink);
+  transition: transform .15s ease-out, filter .15s ease-out;
+}
+.btn:hover { filter: brightness(1.12); }
+.btn:active { transform: translateY(2px); }
+.btn.line { background: transparent; color: var(--ink); }
+.btn.small { padding: .5rem .95rem; font-size: .9rem; }
+.badge-link { display: inline-block; border-radius: 14px; line-height: 0; -webkit-tap-highlight-color: transparent; }
+.badge-link img { width: 200px; height: auto; }
+
+/* --- The bar at the top of a page --- */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; padding-bottom: 14px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; font-size: .95rem; }
+.brand img { width: 36px; height: 36px; border-radius: 10px; }
+.nav { display: flex; align-items: center; gap: 22px; }
+.nav a:not(.btn) { text-decoration: none; font-weight: 500; font-size: .95rem; }
+.nav a:not(.btn):hover { text-decoration: underline; }
+.nav .wide { display: none; }
+@media (min-width: 52rem) { .nav .wide { display: inline; } }
+
+/* A trail of where a page is (Bomerd > Shard Kingdom > Privacy policy) */
+.trail { display: flex; flex-wrap: wrap; gap: .1rem .45rem; list-style: none; margin: 0; padding: 0; font-size: .95rem; }
+.trail li + li::before { content: "\203A"; margin-right: .45rem; opacity: .6; }
+.trail a { text-decoration: none; opacity: .8; }
+.trail a:hover { text-decoration: underline; opacity: 1; }
+.trail [aria-current] { font-weight: 600; }
+
+/* --- Questions: a tile each, opening in place --- */
+.faq { max-width: 46rem; margin: 0 auto; display: grid; gap: 14px; }
+.faq details { background: var(--paper); border-radius: var(--radius); box-shadow: 0 var(--edge) 0 var(--paper-edge); }
+.faq summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 18px 20px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary h3 { margin: 0; font-size: 1.05rem; }
+.faq summary::after {
+  content: ""; flex: none; width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--ink);
+  background: linear-gradient(var(--ink), var(--ink)) center / 12px 2px no-repeat,
+              linear-gradient(var(--ink), var(--ink)) center / 2px 12px no-repeat;
+  transition: transform .25s ease-out;
+}
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 20px 18px; margin: 0; }
+.faq details a { font-weight: 500; }
+
+/* --- Every page's foot: the whole site, so any page is a tap from any other --- */
+.foot { padding: 56px 0 40px; color: var(--ink); background: var(--sky-bottom); }
+.foot .map { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1.5rem 2rem; margin: 0 0 2rem; }
+.foot .map p { margin: 0 0 .5rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: .8rem; }
+.foot .map ul { list-style: none; margin: 0; padding: 0; }
+.foot .map li { margin: 0 0 .4rem; }
+.foot .map a { text-decoration: none; opacity: .82; }
+.foot .map a:hover { text-decoration: underline; opacity: 1; }
+.foot .map [aria-current] { opacity: 1; font-weight: 600; }
+.foot .legal { font-size: .86rem; margin: 0 0 .35rem; opacity: .75; }
+
+/* --- Long text (the privacy policies): a column of paper --- */
+.doc { max-width: 46rem; margin: 0 auto; }
+.doc h1 { font-weight: 300; font-size: clamp(1.9rem, 6vw, 2.8rem); letter-spacing: .1em; text-transform: uppercase; line-height: 1.15; margin: 0 0 .5rem; }
+.doc .updated { margin: 0 0 2rem; }
+.doc h2 { font-weight: 600; font-size: 1.3rem; margin: 2.75rem 0 .75rem; scroll-margin-top: 1rem; }
+.doc ul { padding-left: 1.25rem; }
+.doc li { margin: 0 0 .55rem; }
+.doc strong { font-weight: 600; }
+.doc code { font-size: .92em; }
+.doc table { width: 100%; border-collapse: collapse; margin: 0 0 1.5rem; font-size: .95rem; }
+.doc th, .doc td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); vertical-align: top; }
+.doc th { font-weight: 600; }
+.doc h3 { margin: 1.75rem 0 .5rem; }
+.doc .lede p:last-child, .doc .note p:last-child { margin-bottom: 0; }
+.doc .lede { margin: 0 0 1.75rem; }
+.doc .note { margin-top: 2rem; }
+.doc .contents p { margin: 0 0 .5rem; font-weight: 600; }
+.doc .contents ol { margin: 0; padding-left: 1.9rem; columns: 2 14rem; column-gap: 2rem; }
+.doc .contents li { break-inside: avoid; margin: 0 0 .3rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
+/* --- Pages to read (the policies, the 404): Dawn, or the Abyss when the phone is in dark mode --- */
+.w-auto { --sky-top: #eaf2f8; --sky-bottom: #fdf6ee; --fog: #ffffff; --ground: #f3eee7; --paper: #ffffff; --paper-edge: #d9d3cb; --ink: #2b3440; --brass-word: #8a6a2c; }
+@media (prefers-color-scheme: dark) {
+  .w-auto { --sky-top: #0b1026; --sky-bottom: #1c2547; --fog: #141b3a; --ground: #0e1430; --paper: #262c45; --paper-edge: #080c1d; --ink: #e6ecff; --brass-word: #e0c48a; }
+}
+.page { min-height: 100vh; background: linear-gradient(to bottom, var(--sky-top) 0, var(--sky-bottom) 420px, var(--sky-bottom) 100%); color: var(--ink); }
+.page .top { border-bottom: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
+.page main { padding: 36px 0 64px; }
+.doc .lede, .doc .note { background: var(--paper); border-radius: var(--radius); box-shadow: 0 var(--edge) 0 var(--paper-edge); padding: 20px 22px; }
+.doc .lede { margin-bottom: 2rem; }
+.doc .trail { margin: 0 0 1.75rem; }
+.doc a { font-weight: 500; }
+.doc h2 { padding-top: 1.75rem; border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
+.doc .contents { margin: 0 0 1rem; }
+.doc .contents a { text-decoration: none; }
+.doc .contents a:hover { text-decoration: underline; }

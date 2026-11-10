@@ -2,130 +2,155 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Bomerd</title>
-<meta name="description" content="Calm puzzle games for your phone: Okyay and Shard Kingdom: Color Defense." />
-<style>
-  :root {
-    --bg: #FAF9F6;
-    --surface: #FFFFFF;
-    --ink: #141B3A;
-    --ink-muted: #5B6384;
-    --accent: #3B4BF5;
-    --border: #DADEEF;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0E1220;
-      --surface: #171C2E;
-      --ink: #F4F5FA;
-      --ink-muted: #9AA1C2;
-      --accent: #6C7BFF;
-      --border: #2B3350;
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Bomerd – Shard Kingdom: Color Defense and Okyay</title>
+<meta name="description" content="Bomerd makes calm games for your phone: Shard Kingdom: Color Defense, a tower defense game about tapping the right color, and Okyay, a quiet puzzle game about arrows." />
+<link rel="canonical" href="https://bomerd.com/" />
+<link rel="icon" href="/favicon.ico" sizes="48x48" />
+<link rel="icon" href="/images/shard-kingdom.png" type="image/png" sizes="512x512" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#eaf2f8" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Bomerd" />
+<meta property="og:url" content="https://bomerd.com/" />
+<meta property="og:title" content="Bomerd" />
+<meta property="og:description" content="Calm games for your phone: Shard Kingdom: Color Defense and Okyay." />
+<meta property="og:image" content="https://bomerd.com/images/shard-kingdom-feature.png" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="500" />
+<meta property="og:image:alt" content="Shard Kingdom: Color Defense: glass crystals marching down a road toward the wall" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preload" href="/assets/fonts/outfit.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://bomerd.com/#website",
+      "name": "Bomerd",
+      "url": "https://bomerd.com/",
+      "publisher": { "@id": "https://bomerd.com/#org" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://bomerd.com/#org",
+      "name": "Bomerd",
+      "url": "https://bomerd.com/",
+      "email": "bomerrd@gmail.com",
+      "sameAs": ["https://www.youtube.com/@bomerdstudio"]
     }
+  ]
+}
+</script>
+<style>
+  .home { padding-bottom: 80px; }
+  .hello { text-align: center; padding: 56px 0 40px; }
+  .hello h1 { font-weight: 250; text-transform: uppercase; letter-spacing: .2em; font-size: clamp(2.6rem, 12vw, 4.6rem); line-height: 1; margin: 0 -.2em .9rem 0; }
+  .hello p { font-size: 1.15rem; margin: 0; }
+  .games { display: grid; gap: 22px; max-width: 980px; margin: 0 auto; }
+  .game { background: var(--paper); border-radius: 26px; box-shadow: 0 var(--edge) 0 var(--paper-edge); overflow: hidden; }
+  .game .worlds { display: grid; grid-template-columns: repeat(6, 1fr); height: clamp(150px, 34vw, 260px); }
+  .game .worlds img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; display: block; }
+  .game .in { padding: 22px 22px 24px; }
+  .game .head { display: flex; align-items: center; gap: 16px; margin: 0 0 14px; }
+  .game .head img { width: 72px; height: 72px; border-radius: 18px; flex: none; }
+  .game h2 { font-weight: 300; text-transform: uppercase; letter-spacing: .12em; font-size: clamp(1.3rem, 5vw, 1.9rem); line-height: 1.15; margin: 0; }
+  .game h2 a { text-decoration: none; }
+  .game h2 a:hover { text-decoration: underline; }
+  .game .sub { display: block; margin-top: 4px; font-size: .98rem; }
+  .game .links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 18px; }
+  .game .links .badge-link img { width: 168px; }
+  .game .links a.plain { font-weight: 500; }
+  @media (min-width: 52rem) {
+    .game.wide { display: grid; grid-template-columns: 1.1fr 1fr; }
+    .game.wide .worlds { height: auto; min-height: 100%; }
+    .game.wide .in { padding: 32px; align-self: center; }
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  main {
-    max-width: 44rem;
-    margin: 0 auto;
-    padding: 6rem 16px 4rem;
-  }
-  h1 {
-    font-size: clamp(2.5rem, 9vw, 4rem);
-    letter-spacing: -0.03em;
-    margin: 0 0 .5rem;
-  }
-  .tagline { font-size: 1.25rem; color: var(--ink-muted); margin: 0 0 3rem; }
-  h2 { font-size: 1.05rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); margin: 3rem 0 1rem; }
-  p { margin: 0 0 1rem; }
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 28px;
-    padding: 1.75rem;
-    margin: 0 0 1.25rem;
-    scroll-margin-top: 1.5rem;
-  }
-  .game-head {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    margin: 0 0 1.25rem;
-  }
-  .game-head img {
-    width: 72px;
-    height: 72px;
-    flex: none;
-    border-radius: 18px;
-    border: 1px solid var(--border);
-  }
-  .game-head h3 {
-    font-size: clamp(1.35rem, 5vw, 1.65rem);
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    margin: 0 0 .25rem;
-  }
-  .game-head p { color: var(--ink-muted); margin: 0; }
-  .links { margin: 1.5rem 0 0; }
-  footer {
-    margin-top: 4rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
-    color: var(--ink-muted);
-    font-size: .9rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-  }
-  a { color: var(--accent); }
+  .support { text-align: center; margin: 56px 0 0; }
 </style>
 </head>
-<body>
-<main>
-  <h1>Bomerd</h1>
-  <p class="tagline">Calm puzzle games for your phone.</p>
+<body class="w-abyss">
+<section class="band w-dawn home">
+  <header class="wrap top">
+    <a class="brand" href="/">Bomerd</a>
+    <nav class="nav" aria-label="Site">
+      <a href="/shard-kingdom/">Shard Kingdom</a>
+      <a class="wide" href="#okyay">Okyay</a>
+    </nav>
+  </header>
 
-  <h2>Games</h2>
-
-  <section class="card" id="okyay">
-    <div class="game-head">
-      <img src="images/okyay.png" alt="Okyay icon" width="72" height="72" />
-      <div>
-        <h3>Okyay</h3>
-        <p>A quiet puzzle game about clearing a board of arrows.</p>
-      </div>
+  <div class="wrap">
+    <div class="hello">
+      <h1>Bomerd</h1>
+      <p class="muted">Calm games for your phone.</p>
     </div>
-    <p>Every arrow points somewhere. Tap one whose path to the edge is clear and it slides away, opening a route for the next. Clear the board.</p>
-    <p>New puzzle every day. No account, no timer, no pressure.</p>
-    <p class="links"><a href="privacy/">Privacy policy</a></p>
-  </section>
 
-  <section class="card" id="shard-kingdom">
-    <div class="game-head">
-      <img src="images/shard-kingdom.png" alt="Shard Kingdom: Color Defense icon" width="72" height="72" />
-      <div>
-        <h3>Shard Kingdom: Color Defense</h3>
-        <p>Tap the right color to shatter the glass before it reaches your wall.</p>
-      </div>
+    <div class="games">
+      <article class="game wide" id="shard-kingdom">
+        <a class="worlds" href="/shard-kingdom/" aria-label="Shard Kingdom's six worlds">
+          <img src="/images/shard-kingdom/worlds/dawn-slice.webp" width="180" height="352" alt="" />
+          <img src="/images/shard-kingdom/worlds/mist-slice.webp" width="180" height="352" alt="" />
+          <img src="/images/shard-kingdom/worlds/bloom-slice.webp" width="180" height="352" alt="" />
+          <img src="/images/shard-kingdom/worlds/ember-slice.webp" width="180" height="352" alt="" />
+          <img src="/images/shard-kingdom/worlds/dusk-slice.webp" width="180" height="352" alt="" />
+          <img src="/images/shard-kingdom/worlds/abyss-slice.webp" width="180" height="352" alt="" />
+        </a>
+        <div class="in">
+          <div class="head">
+            <img src="/images/shard-kingdom.png" width="512" height="512" alt="Shard Kingdom: Color Defense icon" />
+            <h2><a href="/shard-kingdom/">Shard Kingdom</a><span class="sub muted" style="text-transform: none; letter-spacing: 0; font-weight: 380">Color Defense</span></h2>
+          </div>
+          <p>A calm tower defense game for Android. Glass crystals march down the road toward your tower; tap the right color to shatter them before they reach your wall.</p>
+          <p class="muted">60 levels across six worlds, three guns and two endless modes. No account needed, and it plays offline.</p>
+          <div class="links">
+            <a class="btn" href="/shard-kingdom/">About the game</a>
+            <a class="badge-link" data-play href="https://play.google.com/store/apps/details?id=com.bomerd.conveyorkingdom"><img src="/images/google-play-badge.png" width="646" height="250" alt="Get it on Google Play" /></a>
+          </div>
+          <div class="links" style="margin-top: 12px"><a class="plain" href="/shard-kingdom/privacy/">Privacy policy</a></div>
+        </div>
+      </article>
+
+      <article class="game" id="okyay">
+        <div class="in">
+          <div class="head">
+            <img src="/images/okyay.png" width="192" height="192" alt="Okyay icon" />
+            <h2>Okyay<span class="sub muted" style="text-transform: none; letter-spacing: 0; font-weight: 380">A quiet puzzle game about clearing a board of arrows</span></h2>
+          </div>
+          <p>Every arrow points somewhere. Tap one whose path to the edge is clear and it slides away, opening a route for the next. Clear the board.</p>
+          <p class="muted">New puzzle every day. No account, no timer, no pressure.</p>
+          <div class="links"><a class="plain" href="/privacy/">Privacy policy</a></div>
+        </div>
+      </article>
     </div>
-    <p>Glass crystals march down the road toward your tower, each a stack of gems of one color. Tap a color and your gun fires it at the closest crystal of that color; when a color runs dry, the Keeper runs to refill it. Fire the right colors and the glass shatters.</p>
-    <p>60 levels across six worlds. No account needed, it plays offline, and its ads are few: a short one as each new world opens, and ones you choose to watch for a reward. The Shop has optional packs and unique outfits.</p>
-    <p class="links"><a href="shard-kingdom/play/?utm_source=website&amp;utm_campaign=home">Get it on Google Play</a> &middot; <a href="shard-kingdom/privacy/">Privacy policy</a></p>
-  </section>
 
-  <h2>Support</h2>
-  <p>Questions, bugs or ideas: <a href="mailto:bomerrd@gmail.com">bomerrd@gmail.com</a></p>
+    <p class="support muted">Questions, bugs or ideas: <a href="mailto:bomerrd@gmail.com">bomerrd@gmail.com</a></p>
+  </div>
+</section>
 
-  <footer>
-    <span>&copy; 2026 Bomerd</span>
-  </footer>
-</main>
+<footer class="foot w-abyss">
+  <div class="wrap">
+    <nav class="map" aria-label="Site map">
+      <div><p>Shard Kingdom</p><ul>
+        <li><a href="/shard-kingdom/">About the game</a></li>
+        <li><a data-play href="https://play.google.com/store/apps/details?id=com.bomerd.conveyorkingdom">Get it on Google Play</a></li>
+        <li><a href="/shard-kingdom/privacy/">Privacy policy</a></li></ul></div>
+      <div><p>Okyay</p><ul>
+        <li><a href="/#okyay">About the game</a></li>
+        <li><a href="/privacy/">Privacy policy</a></li></ul></div>
+      <div><p>Bomerd</p><ul>
+        <li><a href="/" aria-current="page">All games</a></li>
+        <li><a href="mailto:bomerrd@gmail.com">Contact</a></li></ul></div>
+      <div><p>Follow</p><ul>
+        <li><a href="https://www.instagram.com/shardkingdomcolordefense/">Instagram</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61596393538039">Facebook</a></li>
+        <li><a href="https://www.youtube.com/@bomerdstudio">YouTube</a></li></ul></div>
+    </nav>
+    <p class="legal">&copy; 2026 Bomerd</p>
+    <p class="legal">Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </div>
+</footer>
+<script src="/shard-kingdom/get.js" data-campaign="home" defer></script>
 </body>
 </html>

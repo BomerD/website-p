@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>https://bomerd.com/</loc><lastmod>2026-11-10</lastmod></url>
+  <url>
+    <loc>https://bomerd.com/shard-kingdom/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <image:image><image:loc>https://bomerd.com/images/shard-kingdom.png</image:loc></image:image>
+    <image:image><image:loc>https://bomerd.com/images/shard-kingdom-feature.png</image:loc></image:image>
+    <image:image><image:loc>https://bomerd.com/images/shard-kingdom/01-dawn.webp</image:loc></image:image>
+    <image:image><image:loc>https://bomerd.com/images/shard-kingdom/02-mist.webp</image:loc></image:image>
+    <image:image><image:loc>https://bomerd.com/images/shard-kingdom/03-bloom.webp</image:loc></image:image>
+    <image:image><image:loc>https://bomerd.com/images/shard-kingdom/04-ember.webp</image:loc></image:image>
+    <image:image><image:loc>https://bomerd.com/images/shard-kingdom/05-dusk.webp</image:loc></image:image>
+    <image:image><image:loc>https://bomerd.com/images/shard-kingdom/06-abyss.webp</image:loc></image:image>
+    <image:image><image:loc>https://bomerd.com/images/shard-kingdom/07-level-road.webp</image:loc></image:image>
+    <image:image><image:loc>https://bomerd.com/images/shard-kingdom/08-keeper.webp</image:loc></image:image>
+  </url>
+  <url><loc>https://bomerd.com/shard-kingdom/privacy/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://bomerd.com/privacy/</loc><lastmod>2026-11-10</lastmod></url>
+</urlset>

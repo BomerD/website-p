@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Shard Kingdom: Color Defense – Tower Defense Game for Android</title>
+<meta name="description" content="Shard Kingdom: Color Defense is a free tower defense game for Android. Tap the right color to shatter glass crystals before they reach your wall: 60 levels across six worlds, three guns and two endless modes." />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://bomerd.com/shard-kingdom/" />
+<link rel="icon" href="/favicon.ico" sizes="48x48" />
+<link rel="icon" href="/images/shard-kingdom.png" type="image/png" sizes="512x512" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#eaf2f8" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Bomerd" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://bomerd.com/shard-kingdom/" />
+<meta property="og:title" content="Shard Kingdom: Color Defense" />
+<meta property="og:description" content="A calm tower defense game for Android: tap the right color to shatter the glass before it reaches your wall." />
+<meta property="og:image" content="https://bomerd.com/images/shard-kingdom-feature.png" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="500" />
+<meta property="og:image:alt" content="Shard Kingdom: Color Defense: glass crystals marching down a road toward the wall" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preload" href="/assets/fonts/outfit.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/images/shard-kingdom/worlds/dawn.webp" as="image" fetchpriority="high" />
+<link rel="stylesheet" href="/assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["VideoGame", "MobileApplication"],
+      "@id": "https://bomerd.com/shard-kingdom/#game",
+      "name": "Shard Kingdom: Color Defense",
+      "alternateName": "Shard Kingdom",
+      "url": "https://bomerd.com/shard-kingdom/",
+      "description": "A calm tower defense game for Android. Glass crystals march down the road toward your tower; tap the right color to shatter them before they reach your wall. 60 levels across six worlds, three guns, six abilities and two endless modes.",
+      "image": "https://bomerd.com/images/shard-kingdom.png",
+      "screenshot": [
+        "https://bomerd.com/images/shard-kingdom/01-dawn.webp",
+        "https://bomerd.com/images/shard-kingdom/02-mist.webp",
+        "https://bomerd.com/images/shard-kingdom/03-bloom.webp",
+        "https://bomerd.com/images/shard-kingdom/04-ember.webp",
+        "https://bomerd.com/images/shard-kingdom/05-dusk.webp",
+        "https://bomerd.com/images/shard-kingdom/06-abyss.webp",
+        "https://bomerd.com/images/shard-kingdom/07-level-road.webp",
+        "https://bomerd.com/images/shard-kingdom/08-keeper.webp"
+      ],
+      "genre": ["Tower defense", "Arcade", "Casual"],
+      "gamePlatform": "Android",
+      "operatingSystem": "Android",
+      "applicationCategory": "GameApplication",
+      "applicationSubCategory": "Arcade",
+      "playMode": "SinglePlayer",
+      "inLanguage": "en",
+      "datePublished": "2026-10-27",
+      "isAccessibleForFree": true,
+      "installUrl": "https://play.google.com/store/apps/details?id=com.bomerd.conveyorkingdom",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "url": "https://play.google.com/store/apps/details?id=com.bomerd.conveyorkingdom"
+      },
+      "trailer": {
+        "@type": "VideoObject",
+        "name": "Shard Kingdom: Color Defense trailer",
+        "description": "Thirty seconds of Shard Kingdom: Color Defense: crystals marching down the road, the gem buttons, the specials and the six worlds.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/tuZeqB2hdoY/hqdefault.jpg",
+        "uploadDate": "2026-11-03T07:25:51-08:00",
+        "duration": "PT30S",
+        "embedUrl": "https://www.youtube.com/embed/tuZeqB2hdoY",
+        "url": "https://www.youtube.com/watch?v=tuZeqB2hdoY"
+      },
+      "author": { "@id": "https://bomerd.com/#org" },
+      "publisher": { "@id": "https://bomerd.com/#org" },
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.bomerd.conveyorkingdom",
+        "https://www.instagram.com/shardkingdomcolordefense/",
+        "https://www.facebook.com/profile.php?id=61596393538039"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://bomerd.com/#org",
+      "name": "Bomerd",
+      "url": "https://bomerd.com/",
+      "email": "bomerrd@gmail.com"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Bomerd", "item": "https://bomerd.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Shard Kingdom: Color Defense", "item": "https://bomerd.com/shard-kingdom/" }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  /* --- The hero: the title, the stage and the way to Google Play --- */
+  .hero { padding: 0 0 64px; overflow: hidden; }
+  .hero-grid {
+    display: grid; gap: 18px 56px; align-items: center;
+    grid-template-areas: "title" "stage" "text";
+    padding-top: 8px;
+  }
+  @media (min-width: 60rem) {
+    .hero-grid { grid-template-columns: 1fr minmax(0, 440px); grid-template-areas: "title stage" "text stage"; align-items: end; padding-top: 32px; }
+    .hero-text { align-self: start; }
+  }
+  .hero-title { grid-area: title; text-align: center; }
+  .hero-text { grid-area: text; text-align: center; }
+  .hero-stage { grid-area: stage; }
+  @media (min-width: 60rem) { .hero-title, .hero-text { text-align: left; } }
+  .logo {
+    display: block; font-weight: 250; text-transform: uppercase; letter-spacing: .16em; line-height: 1.02;
+    font-size: clamp(2.6rem, 12vw, 5.2rem); margin: 0 -.16em 0 0;
+  }
+  .logo-tag { display: block; font-weight: 600; letter-spacing: .32em; text-transform: uppercase; font-size: clamp(.85rem, 3.2vw, 1.05rem); margin-top: .7rem; opacity: .8; }
+  .gemline { display: flex; gap: 10px; justify-content: center; margin: 16px 0 0; }
+  @media (min-width: 60rem) { .gemline { justify-content: flex-start; } }
+  .gemline span { width: 26px; height: 26px; }
+  .intro { font-size: 1.12rem; max-width: 32rem; margin: 4px auto 1.4rem; }
+  @media (min-width: 60rem) { .intro { margin-left: 0; } }
+  .get { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; justify-content: center; }
+  @media (min-width: 60rem) { .get { justify-content: flex-start; } }
+  .get .facts { font-size: .95rem; margin: 0; }
+  .help { background: var(--paper); border-radius: var(--radius); box-shadow: 0 var(--edge) 0 var(--paper-edge); padding: 14px 18px; margin: 18px auto 0; max-width: 30rem; text-align: left; font-size: .95rem; }
+  .help p { margin: 0 0 .4rem; } .help p:last-child { margin: 0; }
+
+  /* A gem from the game's renders: the sheet's five, 80 units each */
+  .gem { display: inline-block; background: url(/images/shard-kingdom/art/gems.webp) 0 0 / 500% 100% no-repeat; }
+  .gem.g1 { background-position: 25% 0; } .gem.g2 { background-position: 50% 0; }
+  .gem.g3 { background-position: 75% 0; } .gem.g4 { background-position: 100% 0; }
+
+  .stage-frame {
+    position: relative; aspect-ratio: 720 / 860; border-radius: 26px; overflow: hidden;
+    background: #eaf2f8 url(/images/shard-kingdom/worlds/dawn.webp) center / cover no-repeat;
+    box-shadow: 0 var(--edge) 0 var(--paper-edge), 0 18px 40px rgba(43, 52, 64, .12);
+  }
+  .stage-frame canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: manipulation; }
+  .pad { display: flex; justify-content: center; gap: 10px; margin: 16px 0 0; min-height: 76px; }
+  .pad button {
+    flex: 0 1 84px; height: 70px; border: 0; padding: 0; cursor: pointer; border-radius: 16px;
+    background: var(--paper); box-shadow: 0 var(--edge) 0 var(--paper-edge);
+    display: grid; place-items: center; -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+    transition: transform .12s ease-out, box-shadow .12s ease-out;
+  }
+  .pad button[hidden] { display: none; }
+  .pad button .gem { width: 52px; height: 52px; pointer-events: none; }
+  .pad button:active, .pad button.pressed { transform: translateY(4px); box-shadow: 0 2px 0 var(--paper-edge); }
+  .pad button.pressed { animation: sink .2s ease-out forwards; }
+  @keyframes sink { 0% { transform: translateY(5px); box-shadow: 0 1px 0 var(--paper-edge); } 100% { transform: none; box-shadow: 0 var(--edge) 0 var(--paper-edge); } }
+  .try { text-align: center; font-size: .95rem; margin: 12px 0 0; }
+
+  /* --- See it in action: the screens in phones --- */
+  .phones { display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; list-style: none;
+            margin: 0 auto; padding: 6px 16px 18px; max-width: 1100px; scrollbar-width: thin; }
+  .phones li { flex: none; width: 200px; scroll-snap-align: center; text-align: center; }
+  .phone { position: relative; aspect-ratio: 9 / 16; border-radius: 28px; overflow: hidden; border: 7px solid var(--outline);
+           background: var(--outline); box-shadow: 0 14px 30px rgba(34, 56, 58, .18); }
+  .phone img, .phone iframe { display: block; width: 100%; height: 100%; object-fit: cover; border: 0; }
+  .phones .cap { display: block; font-size: .9rem; margin-top: 10px; }
+  .trailer { position: absolute; inset: 0; padding: 0; border: 0; cursor: pointer; background: none; color: #fff; font: inherit; }
+  .trailer::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 40%, rgba(11, 16, 38, .78)); }
+  .trailer .play { position: absolute; left: 50%; top: 44%; z-index: 1; width: 64px; height: 64px; transform: translate(-50%, -50%);
+                   border-radius: 50%; background: rgba(11, 16, 38, .72); border: 2px solid rgba(255, 255, 255, .9); }
+  .trailer .play::before { content: ""; position: absolute; left: 25px; top: 19px; border-style: solid;
+                           border-width: 13px 0 13px 21px; border-color: transparent transparent transparent #fff; }
+  .trailer .label { position: absolute; left: 0; right: 0; bottom: 16px; z-index: 1; font-weight: 600; letter-spacing: .06em; }
+
+  /* --- Grids of tiles --- */
+  .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+  .grid.four { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+  /* A card with an icon: on phones the icon beside the words, centered on them; wider, the icon and the title
+     side by side over the words, all centered */
+  .feature { display: grid; grid-template-columns: 64px 1fr; gap: 4px 16px; align-items: center; }
+  .feature .fh { display: contents; }
+  .feature img { width: 64px; height: 64px; grid-row: 1 / span 2; align-self: center; }
+  .feature h3 { grid-column: 2; margin: 0; align-self: end; }
+  .feature p { grid-column: 2; align-self: start; }
+  @media (min-width: 48rem) {
+    .feature { display: block; text-align: center; }
+    .feature .fh { display: flex; align-items: center; justify-content: center; gap: 14px; min-height: 64px; margin: 0 0 12px; }
+    .feature .fh img { flex: none; }
+    .feature .fh img, .feature h3 { align-self: center; }
+    .feature h3 { text-align: left; }
+  }
+
+  .gems { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 980px; margin: 0 auto; }
+  .gems .tile { flex: 0 0 calc((100% - 24px) / 3); text-align: center; padding: 14px 6px 12px; }
+  @media (min-width: 48rem) { .gems { gap: 16px; } .gems .tile { flex-basis: calc((100% - 64px) / 5); padding: 18px 10px 14px; } }
+  .gems .gem { width: clamp(56px, 16vw, 96px); height: clamp(56px, 16vw, 96px); display: block; margin: 0 auto 6px; }
+  .gems h3 { font-size: 1rem; margin: 0; }
+  .gems .shape { font-size: .85rem; display: block; }
+  .gems .when { font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; display: block; margin-top: 4px; font-weight: 600; opacity: .7; }
+  .stack-note { max-width: 40rem; margin: 2rem auto 0; text-align: center; }
+
+  .guns { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -16px; padding: 0 16px 10px; scrollbar-width: thin; }
+  .guns .tile { flex: 0 0 82%; scroll-snap-align: center; text-align: center; padding-top: 8px; }
+  @media (min-width: 48rem) { .guns { display: grid; grid-template-columns: repeat(3, 1fr); overflow: visible; margin: 0; padding: 0; } .guns .tile { flex: none; } }
+  .swipe { text-align: center; font-size: .85rem; margin: 6px 0 0; }
+  @media (min-width: 48rem) { .swipe { display: none; } }
+  .guns .art { height: 170px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 10px; }
+  .guns .art img { max-height: 170px; width: auto; }
+  .guns .chip { margin: 0 0 10px; }
+  .guns dl { text-align: left; margin: 12px 0 0; }
+  .guns dt { font-weight: 600; margin-top: 10px; }
+  .guns dd { margin: 2px 0 0; }
+  .picker { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin: 0 0 24px; }
+  .picker button { font: 600 .95rem/1 var(--font); padding: .62rem 1.15rem; border-radius: 999px; cursor: pointer;
+                   border: 2px solid var(--ink); background: transparent; color: var(--ink); transition: background .15s ease-out, color .15s ease-out; }
+  .picker button[aria-selected="true"] { background: var(--ink); color: var(--sky-bottom); }
+  .guns .tile[data-gun] { cursor: pointer; transition: box-shadow .15s ease-out; }
+  .guns .tile.viewed { box-shadow: 0 var(--edge) 0 var(--paper-edge), inset 0 0 0 2px var(--ink); }
+  /* Every look drawn at one scale, so the gun visibly grows */
+  .looks { --k: .3; display: flex; justify-content: center; align-items: flex-end; gap: clamp(6px, 3vw, 36px); margin: 8px 0 0; }
+  @media (min-width: 48rem) { .looks { --k: .46; } }
+  .looks figure { margin: 0; text-align: center; flex: none; }
+  .looks img { width: calc(var(--w) * var(--k) * 1px); height: auto; display: block; margin: 0 auto 6px; transition: opacity .2s ease-out; }
+  .looks.switching img { opacity: 0; }
+  .looks figcaption { font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; }
+  .looks figcaption span { display: block; font-weight: 400; letter-spacing: 0; text-transform: none; font-size: .85rem; opacity: .8; }
+
+  /* --- The worlds: each card in its world's own colors --- */
+  .worlds { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+  .world { border-radius: 22px; overflow: hidden; color: var(--ink);
+           background: linear-gradient(var(--sky-top), var(--sky-bottom)); box-shadow: 0 var(--edge) 0 rgba(0, 0, 0, .28); }
+  .world img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 30%; }
+  .world .body { padding: 12px 18px 16px; }
+  .world .num { font-weight: 600; font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; opacity: .75; }
+  .world h3 { font-weight: 300; font-size: 1.45rem; letter-spacing: .14em; text-transform: uppercase; margin: 2px 0 4px; }
+  .world p { margin: 0; }
+  .world .gems-in { display: flex; gap: 6px; margin-top: 10px; align-items: center; font-size: .85rem; }
+  .world .gems-in .gem { width: 22px; height: 22px; }
+  .modes { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); margin-top: 18px; }
+  .mode { position: relative; }
+  .mode .sign { position: absolute; right: 16px; top: 14px; width: 54px; height: 54px; color: var(--ink); }
+  .w-infinite.world { background: linear-gradient(160deg, #5a4d7a, #2c3a62 30%, #1c2547 60%, #0b1026); background-size: 200% 200%; animation: cycle 14s ease-in-out infinite alternate; }
+  @keyframes cycle { from { background-position: 0% 0%; } to { background-position: 100% 100%; } }
+
+  /* --- The Keeper's wardrobe --- */
+  .wardrobe { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; padding: 0; margin: 0 auto; max-width: 1000px; }
+  .wardrobe li { flex: 0 0 108px; height: 178px; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 12px 4px 10px; }
+  .wardrobe .fig { height: 98px; width: 100%; display: flex; align-items: flex-end; justify-content: center; margin: 0 0 8px; }
+  .wardrobe img { width: 86px; height: auto; display: block; }
+  @media (min-width: 48rem) {
+    .wardrobe { gap: 14px; }
+    .wardrobe li { flex-basis: 128px; height: 204px; }
+    .wardrobe .fig { height: 116px; }
+    .wardrobe img { width: 102px; }
+  }
+  .wardrobe .name { font-weight: 600; font-size: .88rem; display: block; line-height: 1.25; }
+  .wardrobe .chip { margin-top: 5px; font-size: .58rem; padding: .15rem .45rem; }
+  .crowns { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 2rem auto 0; max-width: 34rem; text-align: center; }
+  .crowns img { width: 40px; height: 40px; }
+
+  .abilities { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 48rem) { .abilities { gap: 16px; grid-template-columns: repeat(3, 1fr); } }
+  /* Two a row on phones: the icon over the title, centered */
+  .abilities .feature { display: block; text-align: center; padding: 16px 14px 14px; }
+  .abilities .feature .fh { display: flex; flex-direction: column; align-items: center; gap: 6px; margin: 0 0 6px; }
+  .abilities .feature img { width: 52px; height: 52px; }
+  .abilities .feature h3, .abilities .feature img { align-self: center; text-align: center; }
+  @media (min-width: 48rem) {
+    .abilities .feature { padding: 20px 20px 16px; }
+    .abilities .feature .fh { flex-direction: row; gap: 14px; margin: 0 0 12px; }
+    .abilities .feature img { width: 64px; height: 64px; }
+  }
+
+  /* --- The end: the crew and Google Play --- */
+  .cta { text-align: center; border-radius: 28px; padding: 40px 20px 34px; background: var(--paper); box-shadow: 0 var(--edge) 0 var(--paper-edge); max-width: 760px; margin: 0 auto; }
+  .crew { display: flex; justify-content: center; align-items: flex-end; gap: clamp(4px, 2vw, 18px); margin: 0 0 18px; }
+  .crew img { height: clamp(64px, 16vw, 104px); width: auto; }
+  .crew img:nth-child(3) { height: clamp(78px, 19vw, 124px); }
+  .follow { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 2.25rem 0 0; }
+</style>
+</head>
+<body class="w-abyss">
+
+<!-- Dawn: the title and the road -->
+<section class="band w-dawn hero" aria-labelledby="game-title">
+  <header class="wrap top">
+    <a class="brand" href="/shard-kingdom/"><img src="/images/shard-kingdom.png" width="512" height="512" alt="" /> Shard Kingdom</a>
+    <nav class="nav" aria-label="On this page">
+      <a class="wide" href="#worlds">Worlds</a>
+      <a class="wide" href="#guns">Guns</a>
+      <a class="wide" href="#keeper">Keeper</a>
+      <a class="wide" href="#faq">Questions</a>
+      <a class="btn small" data-play href="https://play.google.com/store/apps/details?id=com.bomerd.conveyorkingdom">Get the game</a>
+    </nav>
+  </header>
+
+  <div class="wrap hero-grid">
+    <div class="hero-title">
+      <h1 id="game-title"><span class="logo">Shard Kingdom</span><span class="vh">: </span><span class="logo-tag">Color Defense</span></h1>
+      <div class="gemline" aria-hidden="true"><span class="gem"></span><span class="gem g1"></span><span class="gem g2"></span><span class="gem g3"></span><span class="gem g4"></span></div>
+    </div>
+
+    <div class="hero-stage">
+      <div class="stage-frame">
+        <canvas id="stage" width="720" height="860" data-art="/images/shard-kingdom/" role="img"
+                aria-label="Glass crystals marching down the road toward the wall, and the gun breaking them"></canvas>
+      </div>
+      <div class="pad" role="group" aria-label="Gem buttons: fire a gem at the closest crystal of its color">
+        <button type="button" data-gem="0" aria-label="Fire Ruby"><span class="gem"></span></button>
+        <button type="button" data-gem="1" aria-label="Fire Sapphire"><span class="gem g1"></span></button>
+        <button type="button" data-gem="2" aria-label="Fire Topaz"><span class="gem g2"></span></button>
+        <button type="button" data-gem="3" aria-label="Fire Emerald" hidden><span class="gem g3"></span></button>
+        <button type="button" data-gem="4" aria-label="Fire Amethyst" hidden><span class="gem g4"></span></button>
+      </div>
+      <p class="try muted">Try it: tap the color of the closest crystal.</p>
+    </div>
+
+    <div class="hero-text">
+      <p class="intro">Glass crystals march down the road toward your tower, each a stack of gems of one color. Tap a color and your gun fires it at the closest crystal of that color. Fire the right ones, shatter the glass, hold the wall.</p>
+      <div class="get">
+        <a class="badge-link" data-play href="https://play.google.com/store/apps/details?id=com.bomerd.conveyorkingdom">
+          <img src="/images/google-play-badge.png" width="646" height="250" alt="Get it on Google Play" />
+        </a>
+        <p class="facts muted">Free on Android<br />Plays offline, no account</p>
+      </div>
+      <p class="muted" data-ios hidden>Shard Kingdom is on Android for now.</p>
+      <div class="help" data-play-help hidden>
+        <p><strong>Didn't open?</strong> This app's own browser may not open the Play Store.</p>
+        <p>Tap <strong>&#8942;</strong> at the top right, choose <strong>Open in Chrome</strong>, then tap the button again, or <a data-play-web href="https://play.google.com/store/apps/details?id=com.bomerd.conveyorkingdom">open the Google Play page</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mist: the game in action, and how it plays -->
+<section class="band w-mist" style="--from: #fdf6ee" aria-labelledby="h-shots">
+  <div class="wrap">
+    <span class="kicker">60 levels, six worlds</span>
+    <h2 class="title" id="h-shots">See it in action</h2>
+    <p class="lead muted">Every level comes in phases: Calm, Rising and Storm, with an Afterglow finish every fifth level. Survive the Storm and the level is yours.</p>
+  </div>
+  <ul class="phones">
+    <li>
+      <div class="phone" id="trailer-box">
+        <img src="/images/shard-kingdom/05-dusk.webp" width="540" height="960" loading="lazy" alt="" />
+        <button class="trailer" id="trailer" type="button" aria-label="Play the trailer (YouTube)"><span class="play"></span><span class="label">Watch the trailer</span></button>
+      </div>
+      <span class="cap muted">The trailer</span>
+    </li>
+    <li><div class="phone"><img src="/images/shard-kingdom/01-dawn.webp" width="540" height="960" loading="lazy" alt="Shard Kingdom in Dawn: glass crystals on the road, the gem buttons along the bottom" /></div><span class="cap muted">Dawn</span></li>
+    <li><div class="phone"><img src="/images/shard-kingdom/02-mist.webp" width="540" height="960" loading="lazy" alt="A level in Mist, among tall colonnades" /></div><span class="cap muted">Mist</span></li>
+    <li><div class="phone"><img src="/images/shard-kingdom/03-bloom.webp" width="540" height="960" loading="lazy" alt="A level in Bloom, with platforms floating beside the road" /></div><span class="cap muted">Bloom</span></li>
+    <li><div class="phone"><img src="/images/shard-kingdom/04-ember.webp" width="540" height="960" loading="lazy" alt="A level in Ember's warm canyon" /></div><span class="cap muted">Ember</span></li>
+    <li><div class="phone"><img src="/images/shard-kingdom/06-abyss.webp" width="540" height="960" loading="lazy" alt="A level in the Abyss, a deep tunnel of cubes" /></div><span class="cap muted">Abyss</span></li>
+    <li><div class="phone"><img src="/images/shard-kingdom/07-level-road.webp" width="540" height="960" loading="lazy" alt="The level select: numbered stones standing on the road" /></div><span class="cap muted">The level road</span></li>
+    <li><div class="phone"><img src="/images/shard-kingdom/08-keeper.webp" width="540" height="960" loading="lazy" alt="The Keeper's wardrobe: hats, cloaks and faces" /></div><span class="cap muted">The Keeper's wardrobe</span></li>
+  </ul>
+
+  <div class="wrap" style="margin-top: 56px">
+    <h2 class="title" id="how">How it plays</h2>
+    <p class="lead muted">One tap, one shot. Every shot counts.</p>
+    <div class="grid four">
+      <div class="tile feature"><div class="fh"><img src="/images/shard-kingdom/art/icon-1-crystal.webp" width="192" height="192" alt="" loading="lazy" /><h3>Tap a color</h3></div><p class="muted">Your gun fires it at once at the closest crystal of that color. The wrong color smashes on the road, and three misses at once jam the gun.</p></div>
+      <div class="tile feature"><div class="fh"><img src="/images/shard-kingdom/art/icon-1-keeper.webp" width="192" height="192" alt="" loading="lazy" /><h3>The Keeper refills</h3></div><p class="muted">Every color has its own stock. When one runs dry, the Keeper runs to his vials for more while your other colors keep firing. Tap him to send him for all of them.</p></div>
+      <div class="tile feature"><div class="fh"><img src="/images/shard-kingdom/art/icon-1-streak.webp" width="192" height="192" alt="" loading="lazy" /><h3>Load the special</h3></div><p class="muted">Twelve hits in a row load your gun's special. Fire it at the color you choose. A miss empties the bar.</p></div>
+      <div class="tile feature"><div class="fh"><img src="/images/shard-kingdom/art/icon-1-wall.webp" width="192" height="192" alt="" loading="lazy" /><h3>Hold the wall</h3></div><p class="muted">Crystals that reach their line throw shards at your wall. Break them first, and the wall mends a little after every phase.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Bloom: the gems -->
+<section class="band w-bloom" style="--from: #eef5f2" aria-labelledby="h-gems">
+  <div class="wrap">
+    <h2 class="title" id="h-gems">Every gem has a color and a shape</h2>
+    <p class="lead muted">So colors are easy to tell apart, even for players who see them differently. A crystal is a stack of one gem: every gem of its color you fire knocks one off.</p>
+    <div class="gems">
+      <div class="tile"><span class="gem" role="img" aria-label="Ruby, a red triangle"></span><h3>Ruby</h3><span class="shape muted">Triangle</span><span class="when">From level 1</span></div>
+      <div class="tile"><span class="gem g1" role="img" aria-label="Sapphire, a blue round gem"></span><h3>Sapphire</h3><span class="shape muted">Round</span><span class="when">From level 1</span></div>
+      <div class="tile"><span class="gem g2" role="img" aria-label="Topaz, a yellow diamond"></span><h3>Topaz</h3><span class="shape muted">Diamond</span><span class="when">From level 5</span></div>
+      <div class="tile"><span class="gem g3" role="img" aria-label="Emerald, a green hexagon"></span><h3>Emerald</h3><span class="shape muted">Hexagon</span><span class="when">From Bloom</span></div>
+      <div class="tile"><span class="gem g4" role="img" aria-label="Amethyst, a purple star"></span><h3>Amethyst</h3><span class="shape muted">Star</span><span class="when">From Dusk</span></div>
+    </div>
+    <p class="stack-note muted">Bigger crystals take more hits, and crystals beyond your gun's reach wait in the fog. Three colors to start, five by the end.</p>
+  </div>
+</section>
+
+<!-- Ember: the guns -->
+<section class="band w-ember" style="--from: #fbf1ec" id="guns" aria-labelledby="h-guns">
+  <div class="wrap">
+    <h2 class="title" id="h-guns">Pick your gun</h2>
+    <p class="lead muted">Three guns, three ways to play. Pick the one that suits how you tap, and switch any time.</p>
+    <div class="grid guns">
+      <div class="tile viewed" data-gun="cannon">
+        <div class="art"><img src="/images/shard-kingdom/art/gun-cannon-10.webp" width="324" height="376" loading="lazy" alt="The Cannon: a glass dome with three barrels on its drum" /></div>
+        <h3>Cannon</h3><span class="chip">Steady</span>
+        <p class="muted">The most forgiving, for players who miss now and then.</p>
+        <dl><dt>Knockback</dt><dd class="muted">Every hit shoves the crystal back down the road.</dd>
+            <dt>Big Shot</dt><dd class="muted">A cannonball breaks a crystal of your color and blasts every crystal in range back.</dd></dl>
+      </div>
+      <div class="tile" data-gun="beacon">
+        <div class="art"><img src="/images/shard-kingdom/art/gun-beacon-10.webp" width="324" height="348" loading="lazy" alt="The Beacon: a lighthouse with a crystal lamp" /></div>
+        <h3>Beacon</h3><span class="chip">Precise</span>
+        <p class="muted">Reaches farther, and its beams land at once. For players who rarely miss.</p>
+        <dl><dt>Focus</dt><dd class="muted">Every fifth hit in a row is a focused beam that knocks off two gems.</dd>
+            <dt>Flash</dt><dd class="muted">Breaks a crystal and freezes every crystal of its color.</dd></dl>
+      </div>
+      <div class="tile" data-gun="organ">
+        <div class="art"><img src="/images/shard-kingdom/art/gun-organ-10.webp" width="326" height="340" loading="lazy" alt="The Organ: a row of pipes on its drum" /></div>
+        <h3>Organ</h3><span class="chip">Fast</span>
+        <p class="muted">The quickest notes, for fast fingers.</p>
+        <dl><dt>Chords</dt><dd class="muted">Every third hit of a quick run also strikes the next crystal of its color.</dd>
+            <dt>Fanfare</dt><dd class="muted">A run of notes, one after another, at the color you choose.</dd></dl>
+      </div>
+    </div>
+    <p class="swipe muted" aria-hidden="true">Swipe for the others &rsaquo;</p>
+
+    <h3 class="title" style="font-size: clamp(1.2rem, 4vw, 1.6rem); margin-top: 56px">It grows with you</h3>
+    <p class="lead muted">Coins from every crystal buy a quicker Keeper, more gems of every color and a stronger wall, and each gun has upgrades of its own. Your gun changes its look as it grows.</p>
+    <div class="picker" role="tablist" aria-label="Gun">
+      <button type="button" role="tab" id="tab-cannon" aria-selected="true" aria-controls="looks" data-gun="cannon">Cannon</button>
+      <button type="button" role="tab" id="tab-beacon" aria-selected="false" aria-controls="looks" data-gun="beacon">Beacon</button>
+      <button type="button" role="tab" id="tab-organ" aria-selected="false" aria-controls="looks" data-gun="organ">Organ</button>
+    </div>
+    <div class="looks" id="looks" role="tabpanel" aria-labelledby="tab-cannon">
+      <figure><img data-look="1" src="/images/shard-kingdom/art/gun-cannon-1.webp" style="--w: 260" width="260" height="317" loading="lazy" alt="The Cannon in stone" /><figcaption>Stone<span>levels 1 to 3</span></figcaption></figure>
+      <figure><img data-look="4" src="/images/shard-kingdom/art/gun-cannon-4.webp" style="--w: 316" width="316" height="353" loading="lazy" alt="The Cannon in chrome" /><figcaption>Chrome<span>4 to 6</span></figcaption></figure>
+      <figure><img data-look="7" src="/images/shard-kingdom/art/gun-cannon-7.webp" style="--w: 316" width="316" height="362" loading="lazy" alt="The Cannon in glass" /><figcaption>Glass<span>7 to 9</span></figcaption></figure>
+      <figure><img data-look="10" src="/images/shard-kingdom/art/gun-cannon-10.webp" style="--w: 324" width="324" height="376" loading="lazy" alt="The Cannon at its top look" /><figcaption>Crown<span>level 10</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- Dusk: the worlds and the endless modes -->
+<section class="band w-dusk" style="--from: #f9e6d0" id="worlds" aria-labelledby="h-worlds">
+  <div class="wrap">
+    <span class="kicker">Ten levels each</span>
+    <h2 class="title" id="h-worlds">Six worlds, 60 levels</h2>
+    <p class="lead muted">Each world has its own architecture and light, and each one is bolder and darker than the last.</p>
+    <div class="worlds">
+      <article class="world w-dawn"><img src="/images/shard-kingdom/worlds/dawn-card.webp" width="480" height="427" loading="lazy" alt="Dawn's open courtyard: low white pillars and an arch over the road" />
+        <div class="body"><span class="num">Levels 1 to 10</span><h3>Dawn</h3><p class="muted">An open courtyard in the morning light. The game teaches itself as you play.</p>
+        <div class="gems-in muted"><span class="gem"></span><span class="gem g1"></span><span class="gem g2"></span> 3 colors</div></div></article>
+      <article class="world w-mist"><img src="/images/shard-kingdom/worlds/mist-card.webp" width="480" height="427" loading="lazy" alt="Mist: tall colonnades fading into the fog" />
+        <div class="body"><span class="num">Levels 11 to 20</span><h3>Mist</h3><p class="muted">Tall colonnades fading into the fog. The first real pressure.</p>
+        <div class="gems-in muted"><span class="gem"></span><span class="gem g1"></span><span class="gem g2"></span> 3 colors</div></div></article>
+      <article class="world w-bloom"><img src="/images/shard-kingdom/worlds/bloom-card.webp" width="480" height="427" loading="lazy" alt="Bloom: hexagonal platforms floating in pastel air" />
+        <div class="body"><span class="num">Levels 21 to 30</span><h3>Bloom</h3><p class="muted">Platforms floating in pastel air, and the road's first S-curve.</p>
+        <div class="gems-in muted"><span class="gem"></span><span class="gem g1"></span><span class="gem g2"></span><span class="gem g3"></span> Emerald joins</div></div></article>
+      <article class="world w-ember"><img src="/images/shard-kingdom/worlds/ember-card.webp" width="480" height="427" loading="lazy" alt="Ember: a canyon carved in warm stone" />
+        <div class="body"><span class="num">Levels 31 to 40</span><h3>Ember</h3><p class="muted">A canyon carved in warm stone, late in the afternoon.</p>
+        <div class="gems-in muted"><span class="gem"></span><span class="gem g1"></span><span class="gem g2"></span><span class="gem g3"></span> 4 colors</div></div></article>
+      <article class="world w-dusk"><img src="/images/shard-kingdom/worlds/dusk-card.webp" width="480" height="427" loading="lazy" alt="Dusk: a forest of slim beams in glowing fog" />
+        <div class="body"><span class="num">Levels 41 to 50</span><h3>Dusk</h3><p class="muted">A forest of beams in glowing fog, where the glass starts to shine.</p>
+        <div class="gems-in muted"><span class="gem"></span><span class="gem g1"></span><span class="gem g2"></span><span class="gem g3"></span><span class="gem g4"></span> Amethyst joins</div></div></article>
+      <article class="world w-abyss"><img src="/images/shard-kingdom/worlds/abyss-card.webp" width="480" height="427" loading="lazy" alt="The Abyss: a tunnel of cubes in the deep" />
+        <div class="body"><span class="num">Levels 51 to 60</span><h3>Abyss</h3><p class="muted">A tunnel of cubes in the deep. The hardest of them all.</p>
+        <div class="gems-in muted"><span class="gem"></span><span class="gem g1"></span><span class="gem g2"></span><span class="gem g3"></span><span class="gem g4"></span> 5 colors</div></div></article>
+    </div>
+
+    <h2 class="title" style="margin-top: 64px" id="h-modes">Two endless modes</h2>
+    <p class="lead muted">For when the levels are done, or for a quick run any time: how far can you go?</p>
+    <div class="modes">
+      <article class="world w-infinite mode"><img src="/images/shard-kingdom/worlds/infinite-card.webp" width="480" height="427" loading="lazy" alt="Infinite: every world's forms beside a road that keeps shifting" />
+        <svg class="sign" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 24c-4.5-5.5-7.6-8-11-8a8 8 0 1 0 0 16c3.4 0 6.5-2.5 11-8zm0 0c4.5 5.5 7.6 8 11 8a8 8 0 1 0 0-16c-3.4 0-6.5 2.5-11 8z" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"/></svg>
+        <div class="body"><span class="num">Opens after Dawn</span><h3>Infinite</h3><p class="muted">Waves without end, each harder than the last, under a sky that cycles through every world. Every gem you break scores the wave's number.</p></div></article>
+      <article class="world w-ember mode"><img src="/images/shard-kingdom/worlds/ember-card.webp" width="480" height="427" loading="lazy" alt="Rush, in Ember's canyon" />
+        <svg class="sign" viewBox="0 0 48 48" aria-hidden="true"><path d="M27 4 10 27h12l-3 17 19-25H26z" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"/></svg>
+        <div class="body"><span class="num">Opens after Mist</span><h3>Rush</h3><p class="muted">One unbroken stream of crystals, with surges and short breathers, and a score multiplier that climbs every fifteen seconds you hold out.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- Abyss: the Keeper, abilities, every day, questions -->
+<section class="band w-abyss" style="--from: #6a5c86" id="keeper" aria-labelledby="h-keeper">
+  <div class="wrap">
+    <span class="kicker">Hats, cloaks and faces</span>
+    <h2 class="title" id="h-keeper">Dress the Keeper</h2>
+    <p class="lead muted">The little porcelain figure who keeps your gun supplied. Sixteen hats, sixteen cloaks and ten faces to mix and match, in sets like these.</p>
+    <ul class="wardrobe">
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-keeper.webp" width="202" height="228" loading="lazy" alt="The Keeper in his crown and sage cloak" /></span><span class="name">The Keeper</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-traveler.webp" width="202" height="206" loading="lazy" alt="The Keeper in a hood: the Traveler set" /></span><span class="name">Traveler</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-artist.webp" width="202" height="207" loading="lazy" alt="The Keeper in a beret: the Artist set" /></span><span class="name">Artist</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-night.webp" width="202" height="197" loading="lazy" alt="The Keeper in a helm: the Night watch set" /></span><span class="name">Night watch</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-snowfall.webp" width="202" height="206" loading="lazy" alt="The Keeper in a white hood: the Snowfall set" /></span><span class="name">Snowfall</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-gentleman.webp" width="202" height="239" loading="lazy" alt="The Keeper in a top hat and tuxedo: the Gentleman set" /></span><span class="name">Gentleman</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-stargazer.webp" width="202" height="249" loading="lazy" alt="The Keeper in a wizard's hat and starry cloak: the Stargazer set" /></span><span class="name">Stargazer</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-sailor.webp" width="202" height="208" loading="lazy" alt="The Keeper with a bow and striped cloak: the Sailor set" /></span><span class="name">Sailor</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-royal.webp" width="202" height="228" loading="lazy" alt="The Keeper in a crown, ermine cloak and monocle: the Royal set" /></span><span class="name">Royal</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-party.webp" width="202" height="250" loading="lazy" alt="The Keeper in a party hat: the Party set" /></span><span class="name">Party</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-rancher.webp" width="202" height="221" loading="lazy" alt="The Keeper in a cowboy hat and shades: the Rancher set" /></span><span class="name">Rancher</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-baker.webp" width="202" height="248" loading="lazy" alt="The Keeper in a chef's hat: the Baker set" /></span><span class="name">Baker</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-pumpkin.webp" width="202" height="214" loading="lazy" alt="The Keeper with a pumpkin head: the Pumpkin set" /></span><span class="name">Pumpkin</span><span class="chip">Shop only</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-knight.webp" width="202" height="239" loading="lazy" alt="The Keeper in a knight's helm and tabard: the Knight set" /></span><span class="name">Knight</span><span class="chip">Shop only</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-astronaut.webp" width="202" height="208" loading="lazy" alt="The Keeper in a space helmet and suit: the Astronaut set" /></span><span class="name">Astronaut</span><span class="chip">Shop only</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-robot.webp" width="202" height="225" loading="lazy" alt="The Keeper as a robot: the Robot set" /></span><span class="name">Robot</span><span class="chip">Shop only</span></li>
+      <li class="tile"><span class="fig"><img src="/images/shard-kingdom/art/keeper-pirate.webp" width="202" height="226" loading="lazy" alt="The Keeper in a tricorn and eyepatch: the Pirate set" /></span><span class="name">Pirate</span><span class="chip">Shop only</span></li>
+    </ul>
+    <p class="crowns muted"><img src="/images/shard-kingdom/art/crown.webp" width="160" height="160" alt="" loading="lazy" /> Clothes are paid for with crowns, earned by playing: clearing a world, daily quests, the login streak and achievements.</p>
+  </div>
+
+  <div class="wrap" style="margin-top: 72px">
+    <h2 class="title" id="h-abilities">Six abilities</h2>
+    <p class="lead muted">Take two into every level, for when the Storm gets too close. Each has five levels to buy, and each gun has one more of its own.</p>
+    <div class="abilities">
+      <div class="tile feature"><div class="fh"><img src="/images/shard-kingdom/art/icon-5-freeze.webp" width="192" height="192" alt="" loading="lazy" /><h3>Freeze</h3></div><p class="muted">Every crystal stands still in a block of ice, and none come for a few seconds.</p></div>
+      <div class="tile feature"><div class="fh"><img src="/images/shard-kingdom/art/icon-5-shield.webp" width="192" height="192" alt="" loading="lazy" /><h3>Shield</h3></div><p class="muted">Light runs along the wall and gives it HP on top of its full strength.</p></div>
+      <div class="tile feature"><div class="fh"><img src="/images/shard-kingdom/art/icon-5-spark.webp" width="192" height="192" alt="" loading="lazy" /><h3>Spark</h3></div><p class="muted">Bolts from the gun break the crystals closest to the wall at once.</p></div>
+      <div class="tile feature"><div class="fh"><img src="/images/shard-kingdom/art/icon-5-quake.webp" width="192" height="192" alt="" loading="lazy" /><h3>Earthquake</h3></div><p class="muted">The ground shakes and every crystal in range loses gems.</p></div>
+      <div class="tile feature"><div class="fh"><img src="/images/shard-kingdom/art/icon-5-repair.webp" width="192" height="192" alt="" loading="lazy" /><h3>Repair</h3></div><p class="muted">The wall's cracks mend, up to most of its strength.</p></div>
+      <div class="tile feature"><div class="fh"><img src="/images/shard-kingdom/art/icon-5-gust.webp" width="192" height="192" alt="" loading="lazy" /><h3>Gust</h3></div><p class="muted">A wave of wind runs up the road and blows the crystals back.</p></div>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top: 72px">
+    <h2 class="title" id="h-daily">Something every day</h2>
+    <p class="lead muted">A reason to come back, and crowns for the wardrobe.</p>
+    <div class="grid">
+      <div class="tile feature"><div class="fh"><img src="/images/shard-kingdom/art/icon-5-calendar.webp" width="192" height="192" alt="" loading="lazy" /><h3>Daily quests</h3></div><p class="muted">Three new quests every day pay coins. Finish all three for a crown and charges for your abilities.</p></div>
+      <div class="tile feature"><div class="fh"><img src="/images/shard-kingdom/art/icon-5-goals.webp" width="192" height="192" alt="" loading="lazy" /><h3>A seven-day streak</h3></div><p class="muted">Coins for every day you play in a row, and crowns on the seventh.</p></div>
+      <div class="tile feature"><div class="fh"><img src="/images/shard-kingdom/art/icon-5-medal.webp" width="192" height="192" alt="" loading="lazy" /><h3>Fifteen achievements</h3></div><p class="muted">From a thirty-hit streak to a win without a single miss, each one pays crowns.</p></div>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top: 72px">
+    <h2 class="title" id="faq">Questions</h2>
+    <p class="lead muted">About Shard Kingdom: Color Defense.</p>
+    <div class="faq">
+      <details><summary><h3>Is Shard Kingdom free?</h3></summary><p class="muted">Yes. It's free on Google Play. Its ads are few: a short one as each new world opens, and ones you choose to watch for a reward, such as a Revive or double coins. The Shop sells packs of crowns and coins and a few unique outfits for the Keeper; everything else is earned by playing.</p></details>
+      <details><summary><h3>Is it on iPhone?</h3></summary><p class="muted">Not yet. Shard Kingdom: Color Defense is on Android, through Google Play.</p></details>
+      <details><summary><h3>Does it work offline?</h3></summary><p class="muted">Yes. There's no account and no sign-in, and every level and mode plays without a connection. Ads and purchases need one.</p></details>
+      <details><summary><h3>How many levels are there?</h3></summary><p class="muted">60, ten in each of the six worlds, every one played in phases. Then Infinite and Rush go on for as long as you can hold the wall.</p></details>
+      <details><summary><h3>How do I unlock Infinite and Rush?</h3></summary><p class="muted">Clear Dawn, the first world (levels 1 to 10), and Infinite opens. Clear Mist, the second (levels 11 to 20), and Rush opens. Both are on the main menu, a swipe to either side of the levels.</p></details>
+      <details><summary><h3>Which gun should I pick?</h3></summary><p class="muted">The Cannon if you miss now and then, the Beacon if you rarely miss, the Organ if you tap fast. You can switch any time on the Upgrades screen.</p></details>
+      <details><summary><h3>Will I lose my progress if I reinstall?</h3></summary><p class="muted">Your progress is saved on your phone, so uninstalling the game deletes it. Unique outfits you bought come back with <strong>Restore purchases</strong> in the game's Settings.</p></details>
+      <details><summary><h3>I found a bug, or have an idea.</h3></summary><p class="muted">Write to <a href="mailto:bomerrd@gmail.com">bomerrd@gmail.com</a>.</p></details>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top: 80px">
+    <div class="cta">
+      <div class="crew" aria-hidden="true">
+        <img src="/images/shard-kingdom/art/keeper-knight.webp" width="202" height="239" alt="" loading="lazy" />
+        <img src="/images/shard-kingdom/art/keeper-stargazer.webp" width="202" height="249" alt="" loading="lazy" />
+        <img src="/images/shard-kingdom/art/keeper-keeper.webp" width="202" height="228" alt="" loading="lazy" />
+        <img src="/images/shard-kingdom/art/keeper-pirate.webp" width="202" height="226" alt="" loading="lazy" />
+        <img src="/images/shard-kingdom/art/keeper-astronaut.webp" width="202" height="208" alt="" loading="lazy" />
+      </div>
+      <h2 class="title" id="h-cta">Ready to hold the wall?</h2>
+      <p class="muted">Shard Kingdom: Color Defense is free on Google Play.</p>
+      <a class="badge-link" data-play href="https://play.google.com/store/apps/details?id=com.bomerd.conveyorkingdom">
+        <img src="/images/google-play-badge.png" width="646" height="250" alt="Get it on Google Play" loading="lazy" />
+      </a>
+    </div>
+    <div class="follow">
+      <a class="btn line small" href="https://www.instagram.com/shardkingdomcolordefense/" rel="me">Instagram</a>
+      <a class="btn line small" href="https://www.facebook.com/profile.php?id=61596393538039" rel="me">Facebook</a>
+      <a class="btn line small" href="https://www.youtube.com/watch?v=tuZeqB2hdoY">The trailer on YouTube</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot w-abyss">
+  <div class="wrap">
+    <nav class="map" aria-label="Site map">
+      <div><p>Shard Kingdom</p><ul>
+        <li><a href="/shard-kingdom/" aria-current="page">About the game</a></li>
+        <li><a data-play href="https://play.google.com/store/apps/details?id=com.bomerd.conveyorkingdom">Get it on Google Play</a></li>
+        <li><a href="/shard-kingdom/privacy/">Privacy policy</a></li></ul></div>
+      <div><p>Okyay</p><ul>
+        <li><a href="/#okyay">About the game</a></li>
+        <li><a href="/privacy/">Privacy policy</a></li></ul></div>
+      <div><p>Bomerd</p><ul>
+        <li><a href="/">All games</a></li>
+        <li><a href="mailto:bomerrd@gmail.com">Contact</a></li></ul></div>
+      <div><p>Follow</p><ul>
+        <li><a href="https://www.instagram.com/shardkingdomcolordefense/">Instagram</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61596393538039">Facebook</a></li>
+        <li><a href="https://www.youtube.com/@bomerdstudio">YouTube</a></li></ul></div>
+    </nav>
+    <ol class="trail" aria-label="Breadcrumb" style="margin-bottom: 1rem"><li><a href="/">Bomerd</a></li><li><span aria-current="page">Shard Kingdom</span></li></ol>
+    <p class="legal">&copy; 2026 Bomerd. Questions, bugs or ideas: <a href="mailto:bomerrd@gmail.com">bomerrd@gmail.com</a></p>
+    <p class="legal">Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </div>
+</footer>
+
+<script src="/shard-kingdom/get.js" data-campaign="game-page" defer></script>
+<script src="/assets/stage.js" defer></script>
+<script>
+// It grows with you: each gun's four looks, picked with the tabs or by tapping a gun's card.
+(function () {
+  var NAMES = { cannon: "Cannon", beacon: "Beacon", organ: "Organ" };
+  var WIDTHS = { cannon: { 1: 260, 4: 316, 7: 316, 10: 324 }, beacon: { 1: 260, 4: 316, 7: 316, 10: 324 }, organ: { 1: 260, 4: 316, 7: 316, 10: 326 } };
+  var WORDS = { 1: "in stone", 4: "in chrome", 7: "in glass", 10: "at its top look" };
+  var looks = document.getElementById("looks");
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".picker [data-gun]"));
+  var cards = Array.prototype.slice.call(document.querySelectorAll(".guns [data-gun]"));
+  var current = "cannon";
+  function pick(gun, focus) {
+    tabs.forEach(function (t) {
+      var on = t.getAttribute("data-gun") === gun;
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      t.tabIndex = on ? 0 : -1;
+      if (on && focus) t.focus();
+    });
+    cards.forEach(function (c) { c.classList.toggle("viewed", c.getAttribute("data-gun") === gun); });
+    looks.setAttribute("aria-labelledby", "tab-" + gun);
+    if (gun === current) return;
+    current = gun;
+    looks.classList.add("switching");
+    setTimeout(function () {
+      Array.prototype.forEach.call(looks.querySelectorAll("img[data-look]"), function (img) {
+        var lv = img.getAttribute("data-look");
+        img.src = "/images/shard-kingdom/art/gun-" + gun + "-" + lv + ".webp";
+        img.style.setProperty("--w", WIDTHS[gun][lv]);
+        img.alt = "The " + NAMES[gun] + " " + WORDS[lv];
+      });
+      looks.classList.remove("switching");
+    }, 160);
+  }
+  tabs.forEach(function (t, i) {
+    t.tabIndex = i === 0 ? 0 : -1;
+    t.addEventListener("click", function () { pick(t.getAttribute("data-gun")); });
+    t.addEventListener("keydown", function (e) { // arrows move between the tabs
+      var d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if (!d) return;
+      e.preventDefault();
+      pick(tabs[(i + d + tabs.length) % tabs.length].getAttribute("data-gun"), true);
+    });
+  });
+  cards.forEach(function (c) { c.addEventListener("click", function () { pick(c.getAttribute("data-gun")); }); });
+  // The looks of the other guns, ahead of a tap
+  if ("requestIdleCallback" in window) requestIdleCallback(function () {
+    ["beacon", "organ"].forEach(function (g) { [1, 4, 7, 10].forEach(function (lv) { new Image().src = "/images/shard-kingdom/art/gun-" + g + "-" + lv + ".webp"; }); });
+  });
+})();
+</script>
+<script>
+// The trailer loads from YouTube only once it's asked for.
+document.getElementById("trailer").addEventListener("click", function () {
+  var frame = document.createElement("iframe");
+  frame.src = "https://www.youtube-nocookie.com/embed/tuZeqB2hdoY?autoplay=1&playsinline=1&rel=0";
+  frame.title = "Shard Kingdom: Color Defense trailer";
+  frame.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+  frame.allowFullscreen = true;
+  var box = document.getElementById("trailer-box");
+  box.innerHTML = "";
+  box.appendChild(frame);
+});
+</script>
+</body>
+</html>

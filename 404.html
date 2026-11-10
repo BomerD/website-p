@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Page not found – Bomerd</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" href="/favicon.ico" sizes="48x48" />
+<link rel="icon" href="/images/shard-kingdom.png" type="image/png" sizes="512x512" />
+<link rel="stylesheet" href="/assets/site.css" />
+<style>
+  main { max-width: 34rem; margin: 0 auto; padding: 72px 16px 48px; }
+  h1 { font-weight: 300; text-transform: uppercase; letter-spacing: .14em; font-size: clamp(1.8rem, 8vw, 2.6rem); margin: 0 0 .5rem; }
+  .shards { display: flex; gap: 10px; margin: 0 0 1.25rem; }
+  .shards span { width: 28px; height: 28px; background: url(/images/shard-kingdom/art/gems.webp) 0 0 / 500% 100% no-repeat; opacity: .5; }
+  .shards span:nth-child(2) { background-position: 25% 0; transform: rotate(24deg) translateY(6px); }
+  .shards span:nth-child(3) { background-position: 50% 0; transform: rotate(-18deg); }
+  ul { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 14px; }
+  a.row { display: flex; align-items: center; gap: 14px; padding: 14px 18px; text-decoration: none;
+          background: var(--paper); border-radius: var(--radius); box-shadow: 0 var(--edge) 0 var(--paper-edge); font-weight: 600; }
+  a.row:hover { filter: brightness(1.03); }
+  a.row img { width: 44px; height: 44px; border-radius: 11px; flex: none; }
+  a.row span { display: block; font-weight: 380; font-size: .92rem; }
+</style>
+</head>
+<body class="w-auto page">
+<main>
+  <div class="shards" aria-hidden="true"><span></span><span></span><span></span></div>
+  <h1>Page not found</h1>
+  <p class="muted">Nothing lives at this address. One of these may be what you were looking for.</p>
+  <ul>
+    <li><a class="row" href="/shard-kingdom/"><img src="/images/shard-kingdom.png" alt="" width="512" height="512" /><div>Shard Kingdom: Color Defense<span class="muted">The game, its worlds, guns and the Keeper</span></div></a></li>
+    <li><a class="row" href="/shard-kingdom/privacy/"><img src="/images/shard-kingdom.png" alt="" width="512" height="512" /><div>Shard Kingdom privacy policy<span class="muted">What the game stores and sends</span></div></a></li>
+    <li><a class="row" href="/privacy/"><img src="/images/okyay.png" alt="" width="192" height="192" /><div>Okyay privacy policy<span class="muted">The arrow puzzle game</span></div></a></li>
+    <li><a class="row" href="/"><div>bomerd.com<span class="muted">Every game</span></div></a></li>
+  </ul>
+  <p class="muted" style="margin-top: 2rem">Something broken? <a href="mailto:bomerrd@gmail.com">bomerrd@gmail.com</a></p>
+</main>
+</body>
+</html>

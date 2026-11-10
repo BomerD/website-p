@@ -2,76 +2,43 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Privacy policy — Shard Kingdom: Color Defense</title>
 <meta name="description" content="Shard Kingdom: Color Defense's privacy policy: what the game stores on your device, the gameplay statistics and crash reports it sends, what its ads collect, how its optional purchases work, and the choices you have." />
 <link rel="canonical" href="https://bomerd.com/shard-kingdom/privacy/" />
-<style>
-  :root {
-    --bg: #FAF9F6;
-    --surface: #FFFFFF;
-    --surface-muted: #EEF0FF;
-    --ink: #141B3A;
-    --ink-muted: #5B6384;
-    --accent: #3B4BF5;
-    --border: #DADEEF;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0E1220;
-      --surface: #171C2E;
-      --surface-muted: #212842;
-      --ink: #F4F5FA;
-      --ink-muted: #9AA1C2;
-      --accent: #6C7BFF;
-      --border: #2B3350;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  main { max-width: 42rem; margin: 0 auto; padding: 4rem 16px; }
-  h1 { font-size: clamp(2rem, 7vw, 2.75rem); letter-spacing: -0.02em; margin: 0 0 .5rem; }
-  .updated { color: var(--ink-muted); margin: 0 0 2.5rem; }
-  h2 {
-    font-size: 1.3rem; letter-spacing: -0.01em;
-    margin: 3rem 0 .75rem; padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
-  }
-  p, li { margin: 0 0 1rem; }
-  ul { padding-left: 1.25rem; }
-  li { margin-bottom: .5rem; }
-  strong { font-weight: 600; }
-  a { color: var(--accent); }
-  .lede {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 22px;
-    padding: 1.5rem 1.5rem .5rem;
-    margin: 0 0 1rem;
-  }
-  .note {
-    background: var(--surface-muted);
-    border-radius: 16px;
-    padding: 1rem 1.25rem .25rem;
-    font-size: .95rem;
-  }
-  footer {
-    margin-top: 4rem; padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
-    color: var(--ink-muted); font-size: .9rem;
-  }
-</style>
+<link rel="icon" href="/favicon.ico" sizes="48x48" />
+<link rel="icon" href="/images/shard-kingdom.png" type="image/png" sizes="512x512" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="preload" href="/assets/fonts/outfit.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/assets/site.css" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Bomerd" />
+<meta property="og:url" content="https://bomerd.com/shard-kingdom/privacy/" />
+<meta property="og:title" content="Privacy policy: Shard Kingdom: Color Defense" />
+<meta property="og:description" content="What Shard Kingdom: Color Defense stores on your device, what it sends, what its ads collect, and the choices you have." />
+<meta property="og:image" content="https://bomerd.com/images/shard-kingdom-feature.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Bomerd", "item": "https://bomerd.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Shard Kingdom: Color Defense", "item": "https://bomerd.com/shard-kingdom/" },
+    { "@type": "ListItem", "position": 3, "name": "Privacy policy", "item": "https://bomerd.com/shard-kingdom/privacy/" }
+  ]
+}
+</script>
 </head>
-<body>
-<main>
+<body class="w-auto page">
+<header class="wrap top">
+  <a class="brand" href="/shard-kingdom/"><img src="/images/shard-kingdom.png" width="512" height="512" alt="" /> Shard Kingdom</a>
+  <nav class="nav" aria-label="Site"><a class="wide" href="/shard-kingdom/">The game</a><a class="btn small" data-play href="https://play.google.com/store/apps/details?id=com.bomerd.conveyorkingdom">Get the game</a></nav>
+</header>
+<main class="wrap">
+<article class="doc">
+  <ol class="trail" aria-label="Breadcrumb"><li><a href="/">Bomerd</a></li><li><a href="/shard-kingdom/">Shard Kingdom</a></li><li><span aria-current="page">Privacy policy</span></li></ol>
   <h1>Privacy policy</h1>
-  <p class="updated">Shard Kingdom: Color Defense &middot; Last updated 23 October 2026</p>
+  <p class="updated"><a href="/shard-kingdom/">Shard Kingdom: Color Defense</a> &middot; Last updated 10 November 2026</p>
 
   <div class="lede">
     <p><strong>No accounts, no sign-in, and your progress stays on your device.</strong> To learn what is too hard and to fix crashes, the game sends <strong>gameplay statistics and crash reports</strong> through Google's Firebase. They are tied to a random ID, not to you, and where the law requires it they are sent only if you consent. See <a href="#statistics">Statistics and crash reports</a>.</p>
@@ -79,13 +46,29 @@
     <p>The Shop offers <strong>optional purchases</strong> through Google Play: packs of crowns and coins, and unique outfits for the Keeper. Google Play handles the payment; we never see your payment details. See <a href="#purchases">Purchases</a>.</p>
   </div>
 
-  <h2>Who we are</h2>
+  <nav class="contents" aria-label="On this page">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#who">Who we are</a></li>
+      <li><a href="#device">What the game stores on your device</a></li>
+      <li><a href="#statistics">Statistics and crash reports</a></li>
+      <li><a href="#ads">Ads</a></li>
+      <li><a href="#purchases">Purchases</a></li>
+      <li><a href="#not">What we do not do</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="who">Who we are</h2>
   <p>Shard Kingdom: Color Defense (Android package <code>com.bomerd.conveyorkingdom</code>) is made by Bomerd. You can reach us at <a href="mailto:bomerrd@gmail.com">bomerrd@gmail.com</a>.</p>
 
-  <h2>What the game stores on your device</h2>
+  <h2 id="device">What the game stores on your device</h2>
   <p>The game saves the following locally, in its private app storage on your device:</p>
   <ul>
-    <li>Which levels you have cleared.</li>
+    <li>Which levels you have cleared, which lessons of the tutorial you have seen, and whether the game has asked you to rate it on Google Play.</li>
     <li>Your coin and crown balances, the levels of your upgrades and abilities, and which abilities you have equipped.</li>
     <li>Your chosen shooter, the Keeper's outfit and the clothes you have unlocked for it (with crowns, or bought in the Shop).</li>
     <li>Which Shop purchases the game has already credited (Google Play's purchase tokens), so that none is credited twice.</li>
@@ -99,7 +82,7 @@
   <h2 id="statistics">Statistics and crash reports</h2>
   <p>The game uses Google Analytics for Firebase and Firebase Crashlytics, which Google runs for us, to learn how the game is played and to fix what goes wrong. They send:</p>
   <ul>
-    <li><strong>How you play</strong>, such as when a level or a run starts and ends, whether it was won and how far it got, how long it took, your shots, hits, accuracy and best streak, which gun and abilities you used, your upgrade levels and coins as it starts, the upgrades and abilities you buy, the clothes you buy with crowns, the goals you claim, and the ads you choose to watch.</li>
+    <li><strong>How you play</strong>, such as when a level or a run starts and ends, whether it was won and how far it got, how long it took, your shots, hits, accuracy and best streak, which gun and abilities you used, your upgrade levels and coins as it starts, the upgrades and abilities you buy, the clothes you buy with crowns, the goals you claim, the tutorial's lessons you finish, and the ads you choose to watch.</li>
     <li><strong>Errors and crashes:</strong> where in the game's code an error or a crash happened, what the game was doing just before, and basic information about the device, such as its model, Android version, the game's version and free memory.</li>
     <li><strong>What Firebase records on its own:</strong> when the game is first opened, how often and how long it is played, and purchases made through Google Play (the product and its price).</li>
     <li><strong>A random ID</strong> that Firebase creates for this installation of the game (one for statistics, one for crash reports). It is not your name, email or account, and the game tells Google not to use your advertising ID for statistics.</li>
@@ -126,7 +109,7 @@
   <p><strong>We never see your card, billing address or payment details.</strong> Google Play tells the game only that a purchase went through, with a purchase token and the product bought; the game credits it and keeps the token on your device so it is never credited twice. Refunds are handled by Google Play under its <a href="https://support.google.com/googleplay/answer/2479637">refund policies</a>.</p>
   <p>Your progress, including what you bought, lives only on your device: if you uninstall the game, crowns and coins bought are lost with it, while the unique sets come back with the same Google account: on their own when the game starts, or with <strong>Restore purchases</strong> in the game's Settings.</p>
 
-  <h2>What we do not do</h2>
+  <h2 id="not">What we do not do</h2>
   <ul>
     <li>No uploads of your progress. The game uses the internet only to load ads, to talk to Google Play about purchases, and to send the <a href="#statistics">statistics and crash reports</a> described above.</li>
     <li>No accounts, no sign-in, no email collection.</li>
@@ -135,21 +118,42 @@
   </ul>
   <p>The Android permissions the game uses are vibration (short feedback buzzes during play), internet and network state (to load ads), Google's advertising ID permission (used by the ads) and Google Play's billing permission (for purchases). Google's ads library also declares a few it uses on its own: basic phone state (such as the type of mobile network; never your phone number, calls or contacts), and wake lock and foreground service (to finish its work in the background). Firebase adds Google Play's install referrer permission (to tell whether the game was installed from its store page or from a link) and Android's two ad services permissions (Android's Privacy Sandbox for measuring ads, which the game's statistics are set not to use). None of them asks you for anything.</p>
 
-  <h2>Your rights</h2>
+  <h2 id="rights">Your rights</h2>
   <p>Depending on where you live, you may have the right to access, correct, delete or export your personal data. Your game data is on your device, and uninstalling the game deletes it. The <a href="#statistics">statistics and crash reports</a> are tied only to a random ID on your device, not to your name or email, so we cannot look them up by who you are; they are deleted on the schedule above, reinstalling the game gives you a new ID, and where consent applies you can withdraw it at any time from <strong>Ad privacy</strong> in the game's Settings. For the data Google collects to show ads and to process purchases, see <a href="https://policies.google.com/privacy">Google's privacy policy</a> and the choices under <a href="#ads">Ads</a>. If you have a question, write to <a href="mailto:bomerrd@gmail.com">bomerrd@gmail.com</a> and we will respond within 30 days.</p>
 
-  <h2>Children</h2>
+  <h2 id="children">Children</h2>
   <p>Shard Kingdom: Color Defense is intended for players aged 13 and over. It is not directed at children, and we do not knowingly collect personal information from children. Purchases go through Google Play, where a family's purchase settings and parental approvals apply.</p>
 
-  <h2>Changes to this policy</h2>
+  <h2 id="changes">Changes to this policy</h2>
   <p>If this policy changes, the new version will be posted here with a new date at the top. If a future version of the game changes what data is involved, this policy will be updated before that version reaches you.</p>
 
-  <h2>Contact</h2>
+  <h2 id="contact">Contact</h2>
   <p>Questions, requests or complaints about this policy: <a href="mailto:bomerrd@gmail.com">bomerrd@gmail.com</a></p>
 
   <div class="note"><p>This policy covers the Shard Kingdom: Color Defense app for Android.</p></div>
-
-  <footer><a href="../../#shard-kingdom">&larr; Shard Kingdom: Color Defense</a></footer>
+</article>
 </main>
+<footer class="foot w-abyss">
+  <div class="wrap">
+    <nav class="map" aria-label="Site map">
+      <div><p>Shard Kingdom</p><ul>
+        <li><a href="/shard-kingdom/">About the game</a></li>
+        <li><a data-play href="https://play.google.com/store/apps/details?id=com.bomerd.conveyorkingdom">Get it on Google Play</a></li>
+        <li><a href="/shard-kingdom/privacy/" aria-current="page">Privacy policy</a></li></ul></div>
+      <div><p>Okyay</p><ul>
+        <li><a href="/#okyay">About the game</a></li>
+        <li><a href="/privacy/">Privacy policy</a></li></ul></div>
+      <div><p>Bomerd</p><ul>
+        <li><a href="/">All games</a></li>
+        <li><a href="mailto:bomerrd@gmail.com">Contact</a></li></ul></div>
+      <div><p>Follow</p><ul>
+        <li><a href="https://www.instagram.com/shardkingdomcolordefense/">Instagram</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61596393538039">Facebook</a></li>
+        <li><a href="https://www.youtube.com/@bomerdstudio">YouTube</a></li></ul></div>
+    </nav>
+    <p class="legal">&copy; 2026 Bomerd. Questions, bugs or ideas: <a href="mailto:bomerrd@gmail.com">bomerrd@gmail.com</a></p>
+  </div>
+</footer>
+<script src="/shard-kingdom/get.js" data-campaign="privacy" defer></script>
 </body>
 </html>
